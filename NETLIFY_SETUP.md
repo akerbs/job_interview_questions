@@ -27,10 +27,12 @@ npm run build
 3. Выберите **GitHub** и авторизуйтесь
 4. Выберите репозиторий `akerbs/job_interview_questions`
 5. Настройки сборки:
-   - **Base directory**: `cursor/react-interview-bot`
-   - **Build command**: `npm run build`
-   - **Publish directory**: `.` (или оставьте пустым)
+   - **Base directory**: `cursor/react-interview-bot` ⚠️ **ВАЖНО!**
+   - **Build command**: `npm run build` (или оставьте пустым, будет использоваться из netlify.toml)
+   - **Publish directory**: `cursor/react-interview-bot` (или оставьте пустым, будет использоваться из netlify.toml)
 6. Нажмите **Deploy site**
+
+⚠️ **КРИТИЧЕСКИ ВАЖНО:** Base directory должен быть установлен в **Site settings → Build & deploy → Continuous Deployment → Base directory** как `cursor/react-interview-bot`. Без этого Netlify не найдет проект!
 
 ### Вариант B: Через Netlify CLI
 

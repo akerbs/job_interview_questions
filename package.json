@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
     "build": "rimraf dist && tsc -p tsconfig.json",
+    "build:functions": "tsc -p tsconfig.functions.json",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
