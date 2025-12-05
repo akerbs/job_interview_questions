@@ -11,3 +11,4 @@ included_files = ["dist/**", "node_modules/**"]
 from = "/webhook"
 to = "/.netlify/functions/webhook"
 status = 200
+
