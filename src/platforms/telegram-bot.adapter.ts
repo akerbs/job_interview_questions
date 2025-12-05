@@ -151,6 +151,13 @@ export class TelegramBotAdapter implements BotPlatform {
     await this.bot.telegram.answerCbQuery(String(callbackQueryId), text);
   }
 
+  /**
+   * Обработать обновление от Telegram (для webhook)
+   */
+  async handleUpdate(update: any): Promise<void> {
+    await this.bot.handleUpdate(update);
+  }
+
   private toBotContext(ctx: Context): BotContext {
     if (!ctx.from) {
       throw new Error('Context without user');
