@@ -1,14 +1,13 @@
 [build]
-  command = "npm run build"
-  functions = "netlify/functions"
-  publish = "."
+command = "npm run build"
+functions = "netlify/functions"
+publish = "."
 
 [functions]
-  node_bundler = "esbuild"
-  included_files = ["dist/**", "node_modules/**"]
+node_bundler = "esbuild"
+included_files = ["dist/**", "node_modules/**"]
 
 [[redirects]]
-  from = "/webhook"
-  to = "/.netlify/functions/webhook"
-  status = 200
-
+from = "/webhook"
+to = "/.netlify/functions/webhook"
+status = 200
