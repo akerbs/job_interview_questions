@@ -1,14 +1,14 @@
 [build]
+base = "cursor/react-interview-bot"
 command = "npm run build"
-functions = "netlify/functions"
-publish = "."
+functions = "cursor/react-interview-bot/netlify/functions"
+publish = "cursor/react-interview-bot"
 
 [functions]
 node_bundler = "esbuild"
-included_files = ["dist/**", "node_modules/**"]
+included_files = ["cursor/react-interview-bot/dist/**", "cursor/react-interview-bot/node_modules/**"]
 
 [[redirects]]
 from = "/webhook"
 to = "/.netlify/functions/webhook"
 status = 200
-
